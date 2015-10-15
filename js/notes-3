@@ -1,0 +1,12 @@
+$('#next').click (function start () { 
+          if ($('input:radio:checked').length > 0) { 
+           // alert(Answer);
+            getQuestionsAndAnswers ();
+            
+            
+            change++;
+            } 
+           else { 
+            alert ("Please choose from the available selection");
+            } */
+            //var radioValue = $("input:radio[name='gender']:checked").val();

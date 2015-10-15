@@ -1,0 +1,647 @@
+$(document).ready(function() { 
+
+  var arrayValues = ["Good Morning", "Good Afternoon", "Good Evening", "Good Night"];
+  var choices = $('choice');
+
+    // To show the first question and remove start quiz button
+	$('#mybutton').on('click',  (function  () {
+		$('.top h1').hide();
+		$('.top h2').hide();
+		$('.middle h2').show();
+		$('#mybutton').hide();
+
+	}))
+//});
+   
+   // To check if the radio button has been clicked
+   $('#next').on('click', (function () { 
+   	if ($('input:radio:checked').length > 0) { 
+      for ( var i = 0;  i < arrayValues.length; i++) {
+       
+            $(choices).empty();  
+            $(choices ).append('<input type="radio" name="gender" value="' + arrayValues[i] + '></input><br />');
+              //label>=  "' + arrayValues[i] </label>));
+    //$('choices').append('<input type="radio" name="gender" value="' + i + '">' + arrayValues[i] + '</input><br />');
+    //}
+////});
+alert("halleluain")
+  
+    }else{ alert ("please pick from the available choices")
+    // NOTHING IS CHECKED	
+ }
+ 
+   }));
+
+
+//
+
+//$('#choices').append("<input type='radio' class='option' id='option' name='option' value=" + i + ">" + " " + questions[questionNum].choices[i] + "<br>");
+
+
+
+
+
+
+
+
+   // to check for initial correct answer
+    $("input[type='radio']").click(function(){
+            var radioValue = $("input:radio[name='gender']:checked").val();
+            if(radioValue == "FLARES"){ document.getElementById("ony").innerHTML = "CORRECT"; 
+                //alert("Correct");
+                //$('.choices').empty();
+                //$('.choices').
+            }
+        });
+
+
+
+
+
+   // to dynamically create radion buttons from an array
+
+   //var $greetingOptions = $('#dvOptions');
+    //$greetingOptions.empty();
+    //e.preventDefault();
+   // var arrayValues = ["Good Morning", "Good Afternoon", "Good Evening", "Good Night"];
+    //$("#next").click(function(){
+      
+        
+      
+
+
+if ($('input:radio:checked').size() < 0) {  alert ("Please choose from the available selection?"); }
+
+
+
+  /*{
+            $greetingOptions.append($('<input type="radio" name="greetings" value="' + arrayValues[i] + '</input><br />'));
+        }
+        $greetingOptions.append($('<input type="radio" name="greetings" value="' + i + '">' + arrayValues[i] + '</input><br />'));
+    }
+});
+
+
+
+
+
+
+
+ //('<input type="radio" name="radio-choice-1" id="radio-choice-5" value="choice-5"><label for="radio-choice-5">Bat</label>'));
+ /* var c = $('')
+$("#next").click(function(){
+var $ctrl = $('<input/>').attr({ type: 'radio', name:'gender'}).addClass("rad");
+$("ul.choices>li").append($ctrl);
+}); 
+
+
+
+
+
+    // $("#next").click(function(){
+      //$("li.choices").append 
+//var $ctrl = $('<input/>').attr({ type: 'radio', name:'gender' });
+ //$("choices").append($ctrl);
+});
+
+
+
+//
+//$("#next").click(function(){
+//var $ctrl = $('<input/>').attr({ type: 'radio', name:'gender' });
+ //$("choices").append($ctrl);
+//});
+
+
+
+// value: arrayValues[1]
+
+
+     /*var  questions = [ "What is this name of this popular nail art?", 
+     "What is the name of these popular boots from Australia?" ];
+
+     var choices = [ "French manicure", "Almond style", "Dragonfly" ]; */
+    
+      //var answers = [ "french manicure", "Uggs"];   
+      
+
+
+
+      /*var employees = { "firstName" : "John",  // First element
+                  "lastName"  : "Doe",
+                  "age"       : 23 },
+
+                { "firstName" : "Mary",  // Second Element
+                  "lastName"  : "Smith",
+                  "age"       : 32 }
+                 ;
+alert(employees);
+
+
+
+
+
+var questions = [
+    {
+    	Name:"What is this name of this popular nail art?",
+        //Choices: "French manicure", "Almond style", "Dragonfly" 
+        answer: "French manicure"
+   },
+
+
+
+        //Name: "What is the name of these popular boots from Australia?",
+        //Choices: "hiking boots", "riding boots", "Uggs"
+        //answer: "Uggs"
+    //}
+    
+    ]    
+
+
+    // to remove the current list and show new one with radio buttons
+  //for i<4;
+
+
+
+
+
+//});*/
+
+// $( "input:radio[name=bar]:checked" ).val();
+
+
+// $("input[type='button']").click(function(){
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// to close document.ready function
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//});
+/* for 1<4 
+var question1
+
+
+function getQuestions () {
+	questions[0].show
+}
+
+
+
+
+   contents: What is the name of this style of trousers made popular during the 1970s?
+    answer: Flares
+    get question () {
+	
+};
+
+
+
+
+var questions=[What is the name of this style of trousers made popular during the 1970s?, What is the name of these comfy Australian boots?, what 
+is the name of this style of nail art?]   ] */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//var questions = [ "What is this name of this popular nail art?", 
+          // "What is the name of these popular boots from Australia
+
+
+
+
+
+
+
+function getQuestions() {
+    for ( i = 0;  i < arrayValues.length; i++) {
+       
+            (choices).empty();  
+            $(choices).append('<input type="radio" name="gender" label= "red">');
+            $("middle h2").hide;
+            $(".middle h2").append (questions[0]);
+} }
+      getQuestions();
+
+
+
+
+      
+              //label>=  "' + arrayValues[i] </label>));
+    //$('choices').append('<input type="radio" name="gender" value="' + i + '">' + arrayValues[i] + '</input><br />');
+    //}
+////});
+//alert("halleluain");
+
+
+
+
+
+
+/ To check if the radio button has been clicked and start the game or prompt the user
+         $('#next').click (function start () { 
+          if ($('input:radio:checked').length > 0) { getQuestionsAndAnswers (); }
+           else { alert ("Please choose from the available selection"); 
+            //function getQuestions() {
+           //
+            //{ alert("hi"); }
+            
+
+
+
+
+
+
+
+
+
+//}
+// to reload the page
+
+//function reloadPage(){
+//	location.reload();
+//};
+
+
+
+
+// from last cleanup
+
+
+//var a
+//var my_pictures = new Array();
+//my_pictures[0]=new Image();
+//my_pictures[0].src="../img/flares.jpg";
+//my_pictures[1].src ="../img/frenchmanicure.jpg"
+
+
+/*function DisplayImages() { 
+  $('.image').append(Images[1]);
+
+}
+
+var idx=1;
+
+function showImage() 
+{ 
+var mimg=document.getElementsByClassName('image'); 
+mimg.setAttribute('src',Images[idx]); 
+}*/
+
+
+
+
+
+// else if (diff2 > diff1)  {document.getElementById("feedback").innerHTML ="getting warmer";}
+
+
+//when the button is clicked show response
+
+//delay show new question from array and new answers from array
+//ArrayValues.question
+
+
+
+
+
+//objectName.propertyName  /// same as  objectName["PropertyName"]
+
+
+
+//var radioValue = $("input:radio[name='gender']:checked").val();
+// update varANSwer
+
+
+//var userAnswer = $('gender[name="answers"]:checked').val();
+
+        
+
+
+
+
+        //var choices_len= ArrayValues[answers.length] 
+
+        
+        //change +=1;
+        //change = change++;
+
+
+
+
+   // to check for initial correct answer
+          //$("input[type='radio']").click(function(){
+            //var radioValue = $("input:radio[name='gender']:checked").val();
+            //if(radioValue == "FLARES"){ document.getElementById("ony").innerHTML = "CORRECT"; 
+                //alert("Correct");
+                //$('.choices').empty();
+                //$('.choices').
+           // }
+        //});
+
+
+
+        /*if(radioValue == "French manicure" || "Uggs" || "FLARES") 
+          {document.getElementById("ony").innerHTML = "CORRECT"; 
+       } else  {document.getElementById("ony").innerHTML = "You're obviously Not a fashionista"; } */
+
+
+
+
+       //{ document.getElementById("feedback").innerHTML = "Cold"; 
+         //else {
+          //$(".image").append('<img src="img/uggs.jpg" width= "20%" />');
+
+        
+         //('<img id="theImg" src="theImg.png" />'
+         //$(".image").append(my_pictures[change]);
+
+         //$(".image").append(ArrayValues[change].image[i]);
+         //(".image").append(innerHTML)
+        // showImage(idx);
+        //displaychanges();
+
+
+
+
+/*function start() { 
+          if ($('input:radio:checked').length > 0) { getQuestionsAndAnswers (); }
+           else { alert ("Please choose from the available selection"); }*/
+
+   
+         // To check if the radio button has been clicked and start the game or prompt the user
+
+
+
+
+
+         
+            //change++;
+         
+
+
+         /*$('#next').click start (); 
+          if ($('input:radio:checked').length > 0) { getQuestionsAndAnswers (); }
+           else { alert ("Please choose from the available selection"); 
+            //function getQuestions() {
+           //
+            //{ alert("hi"); }
+            
+  //}));*/
+
+           
+
+
+// name of entire array [index]. property[index]
+
+
+
+
+
+
+
+
+             
+                  /*$(choices).empty();  
+                  $(choices).append('<input type="radio" name="gender" label= "red">');
+                  $("middle h2").hide;
+                  $(".middle h2").append (questions[0]);
+      } }
+            getQuestions();*/
+
+
+            
+            //$('.choices li').append('<input type="radio" name="greetings" value="12">');
+            // ' + i  + ArrayValues[i].answers + '><br />');
+        //}   $('.middle h2').empty();
+
+            //$(".class h2").append(ArrayValues[i].question);
+          //  }else{ alert ("please pick from the available selection");
+          //}
+
+          //}));
+
+
+
+
+
+            
+
+  
+            
+
+
+   
+
+//$('#choices').append("<input type='radio' class='option' id='option' name='option' value=" + i + ">" + " " + questions[questionNum].choices[i] + "<br>");
+
+
+
+
+
+
+
+
+
+
+   // to dynamically create radion buttons from an array
+
+   //var $greetingOptions = $('#dvOptions');
+    //$greetingOptions.empty();
+    //e.preventDefault();
+   // var arrayValues = ["Good Morning", "Good Afternoon", "Good Evening", "Good Night"];
+    //$("#next").click(function(){
+      
+        
+      
+
+
+
+
+
+  /*{
+            $greetingOptions.append($('<input type="radio" name="greetings" value="' + arrayValues[i] + '</input><br />'));
+        }
+        $greetingOptions.append($('<input type="radio" name="greetings" value="' + i + '">' + arrayValues[i] + '</input><br />'));
+    }
+});
+
+
+
+
+
+
+
+ //('<input type="radio" name="radio-choice-1" id="radio-choice-5" value="choice-5"><label for="radio-choice-5">Bat</label>'));
+ /* var c = $('')
+$("#next").click(function(){
+var $ctrl = $('<input/>').attr({ type: 'radio', name:'gender'}).addClass("rad");
+$("ul.choices>li").append($ctrl);
+}); 
+
+
+
+
+
+    // $("#next").click(function(){
+      //$("li.choices").append 
+//var $ctrl = $('<input/>').attr({ type: 'radio', name:'gender' });
+ //$("choices").append($ctrl);
+});
+
+
+
+//
+//$("#next").click(function(){
+//var $ctrl = $('<input/>').attr({ type: 'radio', name:'gender' });
+ //$("choices").append($ctrl);
+//});
+
+
+
+// value: arrayValues[1]
+
+
+     
+     var choices = [ "French manicure", "Almond style", "Dragonfly" ]; */
+    
+      //var answers = [ "french manicure", "Uggs"];   
+      
+
+
+
+      /*var employees = { "firstName" : "John",  // First element
+                  "lastName"  : "Doe",
+                  "age"       : 23 },
+
+                { "firstName" : "Mary",  // Second Element
+                  "lastName"  : "Smith",
+                  "age"       : 32 }
+                 ;
+alert(employees);
+
+
+
+
+
+var questions = [
+    {
+      Name:"What is this name of this popular nail art?",
+        //Choices: "French manicure", "Almond style", "Dragonfly" 
+        answer: "French manicure"
+   },
+
+
+
+        //Name: "What is the name of these popular boots from Australia?",
+        //Choices: "hiking boots", "riding boots", "Uggs"
+        //answer: "Uggs"
+    //}
+    
+    ]    
+
+
+    // to remove the current list and show new one with radio buttons
+  //for i<4;
+
+
+
+
+
+//});*/
+
+// $( "input:radio[name=bar]:checked" ).val();
+
+
+// $("input[type='button']").click(function(){
+
+
+
+// to show correct on  initial 
+
+//$("input[type='radio']").click(function(){
+            //var radioValue = $("input:radio[name='gender']:checked").val();
+           //if(radioValue == "FLARES"){ document.getElementById("ony").innerHTML = "CORRECT"; 
+          // $('#ony').empty();
+                //alert("Correct");
+                //$('.choices').empty();
+                //$('.choices').
+            //}
+        //});
+      //}
+//{ document.getElementById("feedback").innerHTML = "Cold"; 
+
+      //})
