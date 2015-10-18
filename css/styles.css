@@ -1,0 +1,114 @@
+body {
+background-color: white;
+color: brown;
+font-family: 'Slabo 27px', serif;
+}
+
+h1 {
+	width: 10em;
+	margin: auto;
+}
+
+.top {
+	background-color:#40e0d0;
+}
+
+.top h2 {
+	width: 20em;
+	margin: auto;
+	}
+
+
+   
+.top {
+    width: 100%;
+    border:2px; 
+    border-style: solid; 
+    border-color: black;
+    
+   
+}
+
+.middle h2 {
+	width: 27em;
+	margin: auto;
+   display: none;
+}
+
+.middle {
+background-color: #cccccc;
+
+}
+#mybutton {
+	display:block;
+	margin:auto;
+	padding:.5em;
+	margin-top: .5em;
+	color: #468499;
+}
+
+.image {
+	background-color: 	#ff7373;
+}
+
+.image img {
+    display: block;
+    margin: auto;
+    padding:5em;
+
+    }
+
+ ul {
+	list-style: none;
+}    
+
+
+form {
+	width: 15em;
+	margin-left: 25em;
+}
+.answers  {
+	text-align: left;
+}
+
+.answers li {
+	padding: .3em;
+}
+
+.end h2 {
+	float: right;
+	margin-right: 10em;
+}
+
+
+.answers h1 {
+	float:right;
+	margin-right: 5em;
+	margin-top: 1.5em;
+
+}
+#next {
+	display:block;
+	margin:auto;
+	padding:.5em;
+	margin-top: .5em;
+	color: #468499;
+}
+
+.choices  {
+	padding: .3em;
+}
+
+#boots {
+	display: none;
+	background-image: url('../img/uggs.jpg');
+
+}
+
+
+
+
+#nails {
+	display:none;
+	background-image: url('../img/frenchmanicure.jpg');
+}
