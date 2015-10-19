@@ -24,20 +24,20 @@ $(document).ready(function() {
 
         {
             question: "What is this name of this popular nail art?",
-            answers: ["French manicure", "Almond style", "Dragonfly"],
+            answers: ["FRENCH MANICURE", "ALMOND STYLE", "DRAGONFLY"],
             image: ["../img/frenchmanicure.jpg"],
             correctAnswer: [0],
-            CA: "French manicure"
+            CA: "FRENCH MANICURE"
 
         },
 
 
         {
             question: "What is the name of these popular boots from Australia?",
-            answers: ["wellies", "snowboots", "Uggs"],
+            answers: ["WELLIES", "SNOWBOOTS", "UGGS"],
             image: ["img/../../uggs.jpg"],
             correctAnswer: [2],
-            CA:"Uggs"
+            CA:"UGGS"
         },
     ];
 
@@ -59,12 +59,21 @@ $(document).ready(function() {
 
 
 
+    
+
+
     function getQuestionsAndAnswers() {
         if (ArrayValues.length+ 1== change +1 ) {
-    $("#mybutton").show();
-    $(".top h1").show();
-    $(".middle h2").hide();
-   // $('#end h2').hide(); 
+            //( "Want to try again?" ).appendTo('.middle h2' );
+    //$('.middle h2').append("Want to try again? "); 
+    $('#mybutton').show();
+
+    $('.top h1').show();
+    $('.middle h2').hide();
+    $(".image").empty();
+    $(".image").append('<img src="img/flares.jpg" width= "20%" />');
+    $('.choices').empty();
+   
     $("#next").hide();
 } else {
         $('.choices').empty();
