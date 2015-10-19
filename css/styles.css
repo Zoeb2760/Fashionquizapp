@@ -75,7 +75,13 @@ form {
 	padding: .3em;
 }
 
-.end h2 {
+#end {
+	float: right;
+	margin-right: 10em;
+
+}
+
+#end h2 {
 	float: right;
 	margin-right: 10em;
 }

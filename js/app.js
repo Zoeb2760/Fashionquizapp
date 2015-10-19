@@ -98,6 +98,7 @@ $(document).ready(function() {
      
 
     $('#next').click(function start() {
+        $("#end h2").hide;
         if ($('input:radio:checked').length > 0) {
             var Answer = $('input[id="champs"]:checked').val();
             
@@ -119,6 +120,14 @@ $(document).ready(function() {
 
             change++;
             console.log("change =" +change);
+            if (score == ArrayValues.length) { 
+    document.getElementById("end").innerHTML = "Your a fashionista!..your score is " + score; 
+}
+
+
+
+else  { $("#end h2").append = "Your score is  " + score + " \ " + ArrayValues.length;
+}    
             
             
         
@@ -126,14 +135,7 @@ $(document).ready(function() {
     })
 
      
-if (score == ArrayValues.length) { 
-    document.getElementById("end ").innerHTML = "Your a fashionista!..your score is " + score; 
-}
 
-
-
-else  { $("end").append = "you have scored  " + score + " out of " + ArrayValues.length;
-}    
      
    // to end the game and start again
    if (i>3)

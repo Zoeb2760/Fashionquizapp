@@ -60,6 +60,13 @@ $(document).ready(function() {
 
 
     function getQuestionsAndAnswers() {
+        if (ArrayValues.length+ 1== change +1 ) {
+    $("#mybutton").show();
+    $(".top h1").show();
+    $(".middle h2").hide();
+   // $('#end h2').hide(); 
+    $("#next").hide();
+} else {
         $('.choices').empty();
         $('.middle h2').empty();
         $('.middle h2').append(ArrayValues[change].question);
@@ -71,7 +78,8 @@ $(document).ready(function() {
          /*( "input:radio[name=bar]:checked" ).val();*/
 
 
-            /*console.log(Answer);*/   
+            /*console.log(Answer);*/  
+            } 
         }
     }
 
@@ -91,9 +99,12 @@ $(document).ready(function() {
 
 
     // to call the function to get the questions, answers and value
+    // to heck which selection has been made
+    // to compare selection witht he correct answer
      
 
     $('#next').click(function start() {
+
         if ($('input:radio:checked').length > 0) {
             var Answer = $('input[id="champs"]:checked').val();
             
@@ -104,12 +115,15 @@ $(document).ready(function() {
             console.log(" Answer = " + Answer);
             console.log("correct answer = "+ ArrayValues[change].correctAnswer);
             //scores();
-            for (i = 0; i < 3; i++) {
-            var correct= ArrayValues[i].CA; }
+            //for (i = 0; i < 3; i++) {
+            var correct= ArrayValues[change].CA; 
             if (Answer == ArrayValues[change].correctAnswer) {
-            (score++);} else {document.getElementById("ony").innerHTML= "The correct answer is " + correct;
-        }       
 
+            (score++);
+            document.getElementById("ony").innerHTML= "Correct your score is " + score + " / " + ArrayValues.length;
+        } else {document.getElementById("ony").innerHTML= "The correct answer is " + correct + " you have scored  " + score + " / " + ArrayValues.length ;
+        }      
+  console.log("correct statement= " + correct);
             console.log("score =  " + score);
             change++;
             getQuestionsAndAnswers();
@@ -117,6 +131,16 @@ $(document).ready(function() {
 
             
             console.log("change =" +change);
+            console.log("Arrayvalues.length " + ArrayValues.length);
+            if (score == ArrayValues.length) { 
+
+    document.getElementById("end").innerHTML = "YOU ARE A FASHIONISTA..you have a perfect score!"; 
+}
+
+
+
+
+     
             
             
         
@@ -124,19 +148,9 @@ $(document).ready(function() {
     })
 
      
-if (score == ArrayValues.length) { 
-    document.getElementById("end ").innerHTML = "Your a fashionista!..your score is " + score; 
-}
 
-
-
-else  { $("end").append = "you have scored  " + score + " out of " + ArrayValues.length;
-}    
-     
    // to end the game and start again
-   /*if (i>3)
-    $("#mybutton").show;
-    $('#end h2').hide; */
+
 
 
 
