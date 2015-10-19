@@ -14,13 +14,13 @@ $(document).ready(function() {
     //creating an array to hold the questions and answers
     var ArrayValues = [
 
-/* {
-            question: "test?",
+ {
+            question: "What is the name of this style of trousers made popular in the 1970s?",
             answers: ["SKINNY", "FlARES", "STRAIGHT"],
-            image: ["../img/frenchmanicure.jpg"],
+            image: ["../img/flares.jpg"],
             correctAnswer: [1],
             CA:"FLARES"
-        }, */
+        }, 
 
         {
             question: "What is this name of this popular nail art?",
@@ -51,10 +51,10 @@ $(document).ready(function() {
 
     function displayImages() {
         if (change == 0) {
+            $(".image").append('<img src="img/flares.jpg" width= "20%" />');
+        } else  if (change==1){
             $(".image").append('<img src="img/frenchmanicure.jpg" width= "20%" />');
-        } else {
-            $(".image").append('<img src="img/uggs.jpg" width= "20%" />');
-        }
+        } else $(".image").append('<img src="img/uggs.jpg" width= "20%" />');
     }
 
 
@@ -88,10 +88,6 @@ $(document).ready(function() {
 
     }));
 
-    if (change == 0) { (CA = "FlARES");
-     correctAnswer= 1;
-     }
-
 
 
     // to call the function to get the questions, answers and value
@@ -106,18 +102,20 @@ $(document).ready(function() {
             }
             
             console.log(" Answer = " + Answer);
-            console.log(ArrayValues[change].correctAnswer);
+            console.log("correct answer = "+ ArrayValues[change].correctAnswer);
             //scores();
-            var correct= ArrayValues[i].CA;
+            for (i = 0; i < 3; i++) {
+            var correct= ArrayValues[i].CA; }
             if (Answer == ArrayValues[change].correctAnswer) {
             (score++);} else {document.getElementById("ony").innerHTML= "The correct answer is " + correct;
         }       
 
             console.log("score =  " + score);
+            change++;
             getQuestionsAndAnswers();
             
 
-            change++;
+            
             console.log("change =" +change);
             
             
@@ -136,9 +134,9 @@ else  { $("end").append = "you have scored  " + score + " out of " + ArrayValues
 }    
      
    // to end the game and start again
-   if (i>3)
+   /*if (i>3)
     $("#mybutton").show;
-    $('#end h2').hide;
+    $('#end h2').hide; */
 
 
 
