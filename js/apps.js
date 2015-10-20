@@ -150,16 +150,11 @@ $('#button2').on('click', (function() {
      
 
     $('#next').click(function start() {
-        
+      
 
         if ($('input:radio:checked').length > 0) {
             var Answer = $('input[id="champs"]:checked').val();
-            
-            } else {
-            alert("Please choose from the available selection");
-            }
-            
-            console.log(" Answer = " + Answer);
+             console.log(" Answer = " + Answer);
             console.log("correct answer = "+ ArrayValues[change].correctAnswer);
             //scores();
             //for (i = 0; i < 3; i++) {
@@ -168,21 +163,27 @@ $('#button2').on('click', (function() {
 
             (score++);
             document.getElementById("ony").innerHTML= "Correct your score is " + score + " / " + ArrayValues.length;
-        } else {document.getElementById("ony").innerHTML= "The correct answer was " + correct + " you have scored  " + score + " / " + ArrayValues.length ;
-        }      
-  console.log("correct statement= " + correct);
-            console.log("score =  " + score);
-            change++;
-            getQuestionsAndAnswers();
+                } else {document.getElementById("ony").innerHTML= "The correct answer was " + correct + " you have scored <br> " + score + " / " + ArrayValues.length ;
+                }      
+                console.log("correct statement= " + correct);
+                console.log("score =  " + score);
+                change++;
+                getQuestionsAndAnswers();
             
 
             
-            console.log("change =" +change);
-            console.log("Arrayvalues.length " + ArrayValues.length);
-            if (score == ArrayValues.length) { 
+                console.log("change =" +change);
+                console.log("Arrayvalues.length " + ArrayValues.length);
+                if (score == ArrayValues.length) { 
 
-    document.getElementById("end").innerHTML = "YOU ARE A FASHIONISTA..you have a perfect score!"; 
+                document.getElementById("end").innerHTML = "<b>YOU ARE A FASHIONISTA..you have a perfect score!</b>"; 
 }
+            
+            } else {
+            alert("Please choose from the available selection");
+            }
+            
+           
 
 
             //( "Want to try again?" ).appendTo('.middle h2' );
