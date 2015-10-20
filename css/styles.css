@@ -1,5 +1,5 @@
 body {
-background-color: white;
+background-color: ff7373;
 color: brown;
 font-family: 'Slabo 27px', serif;
 }
@@ -36,7 +36,7 @@ h1 {
 }
 
 .middle {
-background-color: #cccccc;
+background-color:;
 
 }
 #mybutton {
@@ -45,6 +45,19 @@ background-color: #cccccc;
 	padding:.5em;
 	margin-top: .5em;
 	color: #468499;
+}
+#button2 {
+	display: none;
+	
+	margin:auto;
+	padding:.5em;
+	margin-top: .5em;
+	color: #468499;
+}
+
+.beginquiz {
+	background-color: #ff7373;
+
 }
 
 .image {

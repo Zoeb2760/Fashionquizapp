@@ -47,6 +47,27 @@ $(document).ready(function() {
         //if (Answer == ArrayValues[change].correctAnswer) {
           //  (score = score++);}
         //}
+        function startagain() {
+
+    
+
+    $('.top h1').show();
+
+    $('.middle h2').hide();
+    
+    //$('.image').empty();
+    //$('.image').append('<img src="img/flares.jpg" width= "20%" />');
+    $('.choices').empty();
+    //$('.image').append( $( "#mybutton" ) );
+    //( $( "h2" ) );
+    //$( ".container" ).append( $( "h2" ) );
+       
+   
+    $("#next").hide();
+    $("#button2").show();
+
+}
+
 
 
     function displayImages() {
@@ -63,7 +84,7 @@ $(document).ready(function() {
 
 
     function getQuestionsAndAnswers() {
-        if (ArrayValues.length+ 1== change +1 ) {
+       /* if (ArrayValues.length+ 1== change +1 ) {
             //( "Want to try again?" ).appendTo('.middle h2' );
     //$('.middle h2').append("Want to try again? "); 
     $('#mybutton').show();
@@ -75,7 +96,14 @@ $(document).ready(function() {
     $('.choices').empty();
    
     $("#next").hide();
-} else {
+} else { */
+    if (ArrayValues.length+ 1== change +1 ) { 
+    startagain ();
+
+    
+    
+
+}else {
         $('.choices').empty();
         $('.middle h2').empty();
         $('.middle h2').append(ArrayValues[change].question);
@@ -91,12 +119,14 @@ $(document).ready(function() {
             } 
         }
     }
+    
 
 
 
 
     // To show the first question and remove start quiz button 
     $('#mybutton').on('click', (function() {
+        //location.reload ();
         $('.top h1').hide();
         $('.top h2').hide();
         $('.middle h2').show();
@@ -104,6 +134,13 @@ $(document).ready(function() {
        
 
     }));
+
+// to restart the quiz
+$('#button2').on('click', (function() {
+    location.reload();
+} ))
+
+
 
 
 
@@ -113,6 +150,7 @@ $(document).ready(function() {
      
 
     $('#next').click(function start() {
+        
 
         if ($('input:radio:checked').length > 0) {
             var Answer = $('input[id="champs"]:checked').val();
@@ -130,7 +168,7 @@ $(document).ready(function() {
 
             (score++);
             document.getElementById("ony").innerHTML= "Correct your score is " + score + " / " + ArrayValues.length;
-        } else {document.getElementById("ony").innerHTML= "The correct answer is " + correct + " you have scored  " + score + " / " + ArrayValues.length ;
+        } else {document.getElementById("ony").innerHTML= "The correct answer was " + correct + " you have scored  " + score + " / " + ArrayValues.length ;
         }      
   console.log("correct statement= " + correct);
             console.log("score =  " + score);
@@ -147,16 +185,20 @@ $(document).ready(function() {
 }
 
 
-
+            //( "Want to try again?" ).appendTo('.middle h2' );
+    //$('.middle h2').append("Want to try again? "); 
+    
+ 
 
      
             
             
         
         
-    })
+    
+})
 
-     
+   //$('#mybutton').show();  
 
    // to end the game and start again
 
