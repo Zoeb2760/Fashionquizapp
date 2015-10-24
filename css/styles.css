@@ -10,24 +10,20 @@ h1 {
 }
 
 .top {
-	background-color:#40e0d0;
+    
+    border:2px; 
+    border-style: solid; 
+    border-color: black;
+    background-color:#40e0d0;
 }
 
 .top h2 {
 	width: 20em;
 	margin: auto;
 	}
-
-
-   
-.top {
-    width: 100%;
-    border:2px; 
-    border-style: solid; 
-    border-color: black;
     
    
-}
+
 
 .middle h2 {
 	width: 27em;
@@ -43,15 +39,15 @@ background-color:;
 	display:block;
 	margin:auto;
 	padding:.5em;
-	margin-top: .5em;
+	
 	color: #468499;
 }
 #button2 {
-	display: none;
+	display: block;
 	
 	margin:auto;
 	padding:.5em;
-	margin-top: .5em;
+
 	color: #468499;
 }
 
@@ -73,6 +69,8 @@ background-color:;
 
  ul {
 	list-style: none;
+	margin-top: 0;
+	margin-bottom: 0;
 }    
 
 

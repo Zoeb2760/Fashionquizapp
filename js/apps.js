@@ -1,5 +1,7 @@
 $(document).ready(function() {
 
+    $("#button2").hide();
+
     // declaring global variables
     var change = 0;
     var i = 0;
