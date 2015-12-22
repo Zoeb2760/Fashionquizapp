@@ -5,7 +5,7 @@ $(document).ready(function() {
     var i = 0;
     var score= 0;
     
-    //var correctAnswer=ArrayValues[change].correctAnswer;
+    
     
    
 
@@ -14,13 +14,6 @@ $(document).ready(function() {
     //creating an array to hold the questions and answers
     var ArrayValues = [
 
-/* {
-            question: "test?",
-            answers: ["SKINNY", "FlARES", "STRAIGHT"],
-            image: ["../img/frenchmanicure.jpg"],
-            correctAnswer: [1],
-            CA:"FLARES"
-        }, */
 
         {
             question: "What is this name of this popular nail art?",
@@ -43,10 +36,7 @@ $(document).ready(function() {
 
 
 
-//function scores () {
-        //if (Answer == ArrayValues[change].correctAnswer) {
-          //  (score = score++);}
-        //}
+
 
 
     function displayImages() {
@@ -67,9 +57,7 @@ $(document).ready(function() {
             $('.choices').append('<li><input type="radio" name="gender"  id= "champs" value=' + i + '>' + ArrayValues[change].answers[i] + '</li><br>');
             $(".image").empty();
             displayImages();
-         //var Answer = $("input:radio[name=gender]:checked").val();
-         /*( "input:radio[name=bar]:checked" ).val();*/
-
+         
 
             /*console.log(Answer);*/   
         }
